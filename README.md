@@ -9,3 +9,12 @@ This may be a serious UX issue especially with the complex menus having multi-le
 So, in this post I provide a solution for the issue. It allows to collapse the nested items and lets you choose whether to disable the parent links or keep them clickable on mobile devices.
 
 Works for both the Menu Module and the Fullwidth Menu Module.
+
+
+# Adding JS
+To implement this feature we’ll use JS and CSS. All the code is commented out properly to help you understand what it does.
+
+First add the JS code into the  Divi Theme Options -> Integration.
+
+# Adding Custom CSS
+Then add the following CSS into Divi Theme Options -> Custom CSS field ( or into the child theme style.css file):
