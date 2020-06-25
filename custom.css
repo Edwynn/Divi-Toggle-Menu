@@ -1,0 +1,64 @@
+/* START: Collapse Divi Menu Module Submenus and Keep Parent Items Clickable on Mobile */
+/* Parent menu item */
+.et_pb_module .et_mobile_menu .menu-item-has-children.clickable,
+.et_pb_module .et_mobile_menu .menu-item-has-children > a {
+  position: relative;
+}
+/* Parent menu item icon */
+.et_pb_module .et_mobile_menu .menu-item-has-children:not(.clickable) > a:after,
+.et_pb_module .et_mobile_menu .menu-item-has-children.clickable > span.parent_icon:after {
+  font-family: "ETmodules";
+  text-align: center;
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+/* Disabled parent menu item icon positioning */
+.et_pb_module .et_mobile_menu .menu-item-has-children:not(.clickable) > a:after {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+}
+/* Clickable parent menu item icon */
+.et_pb_module .et_mobile_menu .menu-item-has-children.clickable > span.parent_icon {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background: rgba(0, 0, 0, 0);
+  border-left: 1px solid #dcdcdc;
+  right: 0;
+  top: 0;
+  z-index: 9;
+}
+/* Collapsed submenu parent menu item icon */
+.et_pb_module .et_mobile_menu .menu-item-has-children:not(.clickable) > a:after,
+.et_pb_module .et_mobile_menu .menu-item-has-children.clickable > span.parent_icon:after {
+  content: "\33";
+}
+/* Expanded submenu parent menu item icon */
+.et_pb_module .et_mobile_menu .menu-item-has-children:not(.clickable).visible > a:after,
+.et_pb_module .et_mobile_menu .menu-item-has-children.clickable.visible > span.parent_icon:after {
+  content: "\32";
+}
+/* Hide submenu by default */
+.et_pb_module .et_mobile_menu ul.sub-menu,
+.et-db #et-boc .et-l .et_pb_menu .et_mobile_menu > ul.sub-menu,
+.et-db #et-boc .et-l .et_pb_fullwidth_menu .et_mobile_menu > ul.sub-menu {
+  display: none !important;
+  visibility: hidden !important;
+}
+/* Show submenu */
+.et_pb_module .et_mobile_menu .visible > ul.sub-menu,
+.et-db #et-boc .et-l .et_pb_menu .et_mobile_menu .visible > ul.sub-menu,
+.et-db #et-boc .et-l .et_pb_fullwidth_menu .et_mobile_menu .visible > ul.sub-menu {
+  display: block !important;
+  visibility: visible !important;
+}
+/* END: Collapse Divi Menu Module Submenus and Keep Parent Items Clickable on Mobile */
